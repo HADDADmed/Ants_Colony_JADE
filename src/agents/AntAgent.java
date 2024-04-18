@@ -1,7 +1,8 @@
 package agents;
 
-import UI.Ui;
+//import UI.Ui;
 import jade.core.AID;
+import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.ParallelBehaviour;
 import jade.gui.GuiAgent;
@@ -10,8 +11,8 @@ import jade.lang.acl.ACLMessage;
 
 import javax.swing.*;
 
-public class AntAgent extends GuiAgent {
-    private transient Ui ui;
+public class AntAgent extends Agent {
+//    private transient Ui ui;
 
     private String nomAgent;
     public AntAgent(){}
@@ -52,10 +53,8 @@ public class AntAgent extends GuiAgent {
         msg.addReceiver(new AID("Intermediaire",AID.ISLOCALNAME));
         send(msg);
     }
-    public int saisirEpoch(int epocks){
+    public int saisirEpochpoch(int epocks){
         return epocks;
     }
-
-    @Override
-    protected void onGuiEvent(GuiEvent guiEvent) {}
+    
 }
